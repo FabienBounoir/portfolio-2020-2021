@@ -1,0 +1,31 @@
+@media (min-width:992px) {
+  .content-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+#projet-image {
+  /*height: 50%;*/
+  /*width: 50%;*/
+  /*margin: 2%;*/
+}
+
+#projet-image {
+  width: 50%;
+  margin: 2%;
+}
+
+.VideoPresentation {
+  margin-top: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+#projets {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
