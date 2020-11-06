@@ -5,5 +5,5 @@ const newLocal = ($(document).ready((function () { AOS.init({ disable: "mobile" 
                 return e("html, body").animate({ scrollTop: t.offset().top - 48 }, 1e3, "easeInOutExpo"), !1;
         }
     })), e(".js-scroll-trigger").click((function () { e(".navbar-collapse").collapse("hide"); })), e("body").scrollspy({ target: "#mainNav", offset: 54 }); var t = function () { e("#mainNav").offset().top > 100 ? e("#mainNav").addClass("navbar-shrink") : e("#mainNav").removeClass("navbar-shrink"); }; t(), e(window).scroll(t);
-} (jQuery), new TypeIt("#typed", { speed: 85, loop: !0 }).type("Bienvenue sur mon site !", { delay: 500 }).delete(null, { speed: 50 }).type("j'aime l'informatique", { delay: 500 }).delete(16, { speed: 50 }).type("energetic", { delay: 750 }).delete(9, { speed: 50 }).type("open-minded", { delay: 750 }).delete(11, { speed: 50 }).type("Brave, so Be Brave", { delay: 750 }).delete(null, { speed: 50 }).go());
+} (jQuery), new TypeIt("#typed", { speed: 85, loop: !0 }).type("Bienvenue sur mon site !", { delay: 750 }).delete(null, { speed: 50 }).type("hello world", { delay: 300 }).delete(null, { speed: 50 }).type("je suis énergique", { delay: 750 }).delete(9, { speed: 50 }).type("ouvert d'esprit", { delay: 750 }).delete(15, { speed: 50 }).type("curieux", { delay: 750 }).delete(null, { speed: 50 }).go());
 
