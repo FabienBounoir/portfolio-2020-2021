@@ -68,8 +68,9 @@ function largeMeme(){
     //     document.getElementsByTagName("body")[0].style.marginLeft= "8px";
     //     document.getElementsByTagName("body")[0].style.marginRight= "8px";
     //     document.getElementsByTagName("footer")[0].style.marginLeft= "0px";
-        window.scroll(document.body.scrollHeight,0)
-    },19000)
+        // window.scroll(document.body.scrollHeight,0)
+        $("html, body").animate({ scrollTop: 0 });
+    },21000)
 
 i=0
 j=100
