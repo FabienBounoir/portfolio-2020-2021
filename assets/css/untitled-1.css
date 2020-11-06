@@ -29,3 +29,27 @@
   padding-bottom: 80px;
 }
 
+#meteoVille {
+  grid-area: header;
+  color: aliceblue;
+}
+
+#infoMeteo {
+  grid-area: info;
+  padding-left: 20%;
+  padding-top: 2%;
+}
+
+#infoMeteo p {
+  font-size: 160%;
+}
+
+#iconMeteo {
+  grid-area: icone;
+  text-align: center;
+}
+
+.detail-ville {
+  padding: 5%;
+}
+

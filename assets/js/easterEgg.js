@@ -19,7 +19,7 @@ function popup() {
     // ouvre une fenetre sans barre d'etat, ni d'ascenceur
     let  mario = open("",'popup','width=1040px,height=555px,toolbar=no,scrollbars=no,resizable=yes');	
     mario.document.write("<title>EasterEgg</title>");
-    mario.document.write("<body><iframe src=\"http://funhtml5games.com/?embed=marioeditor\" style=\"width:1024px;height:540px;border:none;\" frameborder=\"0\" scrolling=\"no\"></iframe></body>");
+    mario.document.write("<body><iframe src=\"https://funhtml5games.com/?embed=marioeditor\" style=\"width:1024px;height:540px;border:none;\" frameborder=\"0\" scrolling=\"no\"></iframe></body>");
     mario.document.close();
 }
 
@@ -117,17 +117,23 @@ function meteo()
 }
 
 function generateHtmlMeteo(data){
-    let MeteoTemplate = '<h2 id="meteoVille"> '+ data.name +' </h2>'+
-                            '<div id=infoMeteo>'+
-                                '<p>➜ Temperature: '+ data.main.temp +'°C</p>'+
-                                '<p>➜ Humidité: '+ data.main.humidity +'%</p>'+
-                                '<p>➜ Vitesse vent: '+ data.wind.speed +' m/s</p>'+
-                                '<p>➜ Pression: '+ data.main.pressure +' Hpa</p>'+
-                            '</div>'+
-                            '<div id=iconMeteo>'+
-                                '<img alt="title" src="http://openweathermap.org/img/w/'+ data.weather[0].icon +'.png" style="border: medium none; width: 300px; height: 300px; background: url(&quot;http://openweathermap.org/img/w/'+ data.weather[0].icon +'.png&quot;) repeat scroll 0% 0% transparent;" width="300" height="300">'+
-                                '<p>'+ data.weather[0].main +' </p>'+
-                            '</div>'
+    let MeteoTemplate = '<h1 class="text-center">'+ data.name +'</h1>'+
+    '<div class="container">'+
+        '<div class="row">'+
+            '<div class="col-md-6 text-center detail-ville">'+
+                '<div>'+
+                    '<p>➜ Temperature: '+ data.main.temp +'°C</p>'+
+                    '<p>➜ Humidité: '+ data.main.humidity +'%</p>'+
+                    '<p>➜ Vitesse vent: '+ data.wind.speed +' m/s</p>'+
+                    '<p>➜ Pression: '+ data.main.pressure +' Hpa</p>'+
+                '</div>'+
+            '</div>'+
+            '<div class="col-md-6 text-center"><img alt="title" src="http://openweathermap.org/img/w/'+ data.weather[0].icon +'.png" style="border: medium none; width: 300px; height: 300px; background: url(&quot;http://openweathermap.org/img/w/'+ data.weather[0].icon +'.png&quot;) repeat scroll 0% 0% transparent;" width="300" height="300">'+
+            '<p>'+ data.weather[0].main +' </p>'+
+            '</div>'+
+        '</div>'+
+    '</div>'
+    
     return MeteoTemplate
 }
 
