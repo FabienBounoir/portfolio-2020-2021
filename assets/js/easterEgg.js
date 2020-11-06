@@ -32,24 +32,24 @@ window.addEventListener('keydown', function (event)
         key = "";
     }
 
-    if(key == "bouns")
+    if(key == "bouns") //actif sur toutes les pages
     {
         largeMeme();
         key = "";
     }
-    else if(key == "mario")
+    else if(key == "mario") //actif sur toutes les pages
     {
         popup();
         key = "";
     }
-    else if(key == 'giveyouup')
+    else if(key == 'giveyouup') //actif sur la page darts.html
     {
         document.getElementById("VideoPresentation").innerHTML = never;
         var v = document.getElementsByTagName("video")[0];
         v.play();
         key = "";
     }
-    else if(key == 'meteo')
+    else if(key == 'meteo') //actif sur la page sonde.html
     {
         meteo()
         key = "";
@@ -65,10 +65,6 @@ function largeMeme(){
     setTimeout(function(){LoopScroll()},2500)
 
     setTimeout(function(){
-    //     document.getElementsByTagName("body")[0].style.marginLeft= "8px";
-    //     document.getElementsByTagName("body")[0].style.marginRight= "8px";
-    //     document.getElementsByTagName("footer")[0].style.marginLeft= "0px";
-        // window.scroll(document.body.scrollHeight,0)
         $("html, body").animate({ scrollTop: 0 });
     },21000)
 
