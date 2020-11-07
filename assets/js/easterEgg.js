@@ -1,6 +1,6 @@
 //easter Egg
 var largememe = new Audio('https://www.myinstants.com/media/sounds/wide-poutine-walk.mp3');
-var visiteur = new Audio('https://www.myinstants.com/media/sounds/visiteurdemachaine.mp3%27');
+var visiteur = new Audio('https://www.myinstants.com/media/sounds/visiteurdemachaine.mp3');
 var never = '<iframe allowfullscreen frameborder="0" src="https://streamable.com/e/rb2bk8?autoplay=1" class="embed-responsive-item" width="100%" height="auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>'
 var darts = '<iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/JlGrBQHeUXs?autoplay=1" class="embed-responsive-item" width="100%" height="auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>'
 var key = "";
