@@ -1,8 +1,7 @@
-// var ok = new Audio('https://www.myinstants.com//media/sounds/meme-okay-lets-go.mp3');
-
 //easter Egg
 var largememe = new Audio('https://www.myinstants.com/media/sounds/wide-poutine-walk.mp3');
 var never = '<iframe allowfullscreen frameborder="0" src="https://streamable.com/e/rb2bk8?autoplay=1" class="embed-responsive-item" width="100%" height="auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>'
+var darts = '<iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/JlGrBQHeUXs?autoplay=1" class="embed-responsive-item" width="100%" height="auto" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>'
 var key = "";
 
 //Meteo
@@ -27,9 +26,15 @@ function popup() {
 window.addEventListener('keydown', function (event)
 {
     key += event.key;
-    if(event.key == "Enter")
+	lastEnter = event.key;
+	
+    if(lastEnter == "Enter") //supprimer la chaine completement
     {
         key = "";
+    }
+	else if(lastEnter == "Backspace")  //supprime juste le dernier caractere
+    {
+		key = key.substring(0, key.length - 10);
     }
 
     if(key == "bouns") //actif sur toutes les pages
@@ -40,6 +45,11 @@ window.addEventListener('keydown', function (event)
     else if(key == "mario") //actif sur toutes les pages
     {
         popup();
+        key = "";
+    }
+	else if(key == 'darts') //actif sur la page darts.html 
+    {
+        document.getElementById("VideoPresentation").innerHTML = darts;
         key = "";
     }
     else if(key == 'giveyouup') //actif sur la page darts.html
@@ -77,9 +87,6 @@ function LoopMargin() {         //  create a loop function
     setTimeout(function() {   
       i++;                    //  increment the counter
       if (i < 20) {           //  if the counter < 20, call the loop function
-        //   document.getElementsByTagName("body")[0].style.marginLeft= (i*-1) + "%";
-        //   document.getElementsByTagName("body")[0].style.marginRight= (i*-1) + "%";
-        //   document.getElementsByTagName("footer")[0].style.marginLeft= i + "%";
         LoopMargin();             //  ..  again which will trigger another 
       }                       
     }, 50)              //  ..  setTimeout()
@@ -90,13 +97,14 @@ function LoopScroll() {         //  create a loop function
         k=j;
         j++;          
       //  increment the counter
-      if (j < document.body.scrollHeight) {           //  if the counter < body, call the loop function
+      if (j < document.body.scrollHeight) {     //if the counter < body, call the loop function
         window.scrollTo(0,j);
-        LoopScroll();             //  ..  again which will trigger another 
+        LoopScroll();             				//again which will trigger another 
       }                       
-    }, 4.5)                 //  ..  setTimeout()
+    }, 4.5)                 					//setTimeout()
 }
 
+//function qui fait la requete des information meteorologique en fonction de la position de la personne
 function meteo()
 {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -113,6 +121,7 @@ function meteo()
     
 }
 
+//fonction qui genere le html en fonction des informations que retourne l'api
 function generateHtmlMeteo(data){
     let MeteoTemplate = '<h1 class="text-center">'+ data.name +'</h1>'+
     '<div class="container">'+
